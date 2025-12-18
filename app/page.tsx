@@ -296,7 +296,7 @@ export default function Home() {
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <div className="flex items-center justify-between gap-4">
               <div>
-                <p className="text-sm text-white/60">Luca</p>
+                <p className="text-sm text-white/60">Luca Lazzaro</p>
                 <p className="text-lg font-semibold">AI Engineer, Med-Tech</p>
               </div>
 
