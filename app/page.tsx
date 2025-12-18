@@ -358,7 +358,7 @@ export default function Home() {
             <div className="flex items-start justify-between gap-8">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                  Shaping the future of Med-Tech Dental Intelligence.
+                  🚀 DEPLOY TEST — IF YOU SEE THIS, WE’RE GOOD
                 </h1>
 
                 <p className="text-lg md:text-xl text-white/70 max-w-2xl">
