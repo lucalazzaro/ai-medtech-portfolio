@@ -259,6 +259,37 @@ function ProjectCard({ project }: { project: Project }) {
 
       <div className="mt-5 space-y-5">
         <p className="text-white/75">{project.context}</p>
+        {project.links ? (
+  <div className="mt-4 flex flex-wrap gap-3">
+    {project.links.demo ? (
+      <a
+        href={project.links.demo}
+        target="_blank"
+        rel="noreferrer"
+        className="rounded-xl bg-white text-black px-4 py-2 text-sm font-medium hover:bg-white/90 transition"
+      >
+        Live Demo
+      </a>
+    ) : null}
+
+    {project.links.github ? (
+      <a
+        href={project.links.github}
+        target="_blank"
+        rel="noreferrer"
+        className="rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm hover:bg-white/10 transition"
+      >
+        GitHub
+      </a>
+    ) : null}
+
+    {project.featured ? (
+      <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs uppercase tracking-widest text-white/60">
+        Featured
+      </span>
+    ) : null}
+  </div>
+) : null}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <InfoBox label="Input" value={project.mentalModel.input.join(" • ")} />
