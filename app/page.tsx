@@ -141,46 +141,50 @@ const projects: Project[] = [
     status: "Coming soon",
   },
   {
-    title: "AI-Augmented Intake & Triage System",
-    subtitle: "Process intelligence, not chatbot hype",
-    context:
-      "Most clinical intake arrives as messy, inconsistent text. This project turns unstructured patient descriptions into validated structured data—designed to reduce admin friction and improve downstream clinical workflow quality.",
-    mentalModel: {
-      input: [
-        "Simulated free-text patient requests / symptoms",
-        "Basic metadata (channel, date, clinic context)",
-        "Optional constraints (required fields for downstream systems)",
-      ],
-      transformation: [
-        "LLM extraction to structured JSON (schema-first prompting)",
-        "Validation + normalization (types, ranges, required fields)",
-        "Confidence / fallback logic (when data is incomplete)",
-      ],
-      output: [
-        "Clean structured intake record (ready for systems)",
-        "Triage tags (category / urgency / follow-up needs)",
-        "Audit trail: what was inferred vs explicitly stated",
-      ],
-    },
-    technicalChoice: {
-      choice: "Schema-first extraction with strict validation.",
-      why: "The point is reliable structure, not conversation. Validations prevent garbage data from flowing downstream and make integration realistic.",
-    },
-    deliberateNonChoice:
-      "I intentionally did NOT build a ‘chatbot’. The focus is data quality and workflow integration, not fancy dialogue.",
-    snapshot: {
-      hook: "Turn chaotic patient intake text into validated structured data.",
-      problem:
-        "Intake information often arrives incomplete/incoherent, creating downstream friction and inconsistent triage.",
-      approach:
-        "LLM extracts JSON following a strict schema; backend validation normalizes fields; outputs are integration-ready.",
-      techStack:
-        "LLM API, prompt engineering, backend validations (FastAPI optional)",
-      impact:
-        "Higher-quality intake data and faster triage with fewer manual back-and-forth steps (coming soon).",
-    },
-    status: "Coming soon",
+  title: "AI Intake → JSON & Triage",
+  subtitle: "Schema-first intake processing with downstream gating",
+  context:
+    "Most clinical intake arrives as messy free text. This project demonstrates how unstructured intake can be converted into validated, auditable structured data — explicitly blocking downstream usage when clarification is required.",
+  mentalModel: {
+    input: [
+      "Free-text patient intake",
+      "Channel metadata (web / email / phone)"
+    ],
+    transformation: [
+      "Schema-first extraction",
+      "Validation and normalization",
+      "Audit trail + downstream decision gate"
+    ],
+    output: [
+      "Validated structured intake record",
+      "Triage category and urgency",
+      "Clear next-step recommendation"
+    ],
   },
+  technicalChoice: {
+    choice: "Strict schema validation and explicit gating over conversational UX.",
+    why: "In clinical workflows, reliability and traceability matter more than fluent dialogue.",
+  },
+  deliberateNonChoice:
+    "No chatbot interface and no black-box predictions.",
+  snapshot: {
+    hook: "Turn messy intake text into production-safe structured data.",
+    problem:
+      "Unvalidated intake data propagates errors and operational friction downstream.",
+    approach:
+      "Schema-first extraction with explicit validation and decision gates.",
+    techStack: "Next.js, TypeScript, Zod",
+    impact:
+      "Higher-quality intake data and safer downstream automation.",
+  },
+  status: "Live",
+  links: {
+    demo: "https://ai-intake-triage.vercel.app/",
+    github: "https://github.com/lucalazzaro/ai-intake-triage",
+  },
+  featured: true,
+}
+
 ];
 
 function Pill({ children }: { children: React.ReactNode }) {
