@@ -37,51 +37,66 @@ type Project = {
     techStack: string;
     impact: string;
   };
-  status: string;
+    status: string;
+  links?: {
+    demo?: string;
+    github?: string;
+  };
+  featured?: boolean;
 };
+
 
 const projects: Project[] = [
   {
-    title: "Dental Workflow Bottleneck Analyzer",
-    subtitle: "AI-assisted operational intelligence",
+    title: "Clinic Ops Metrics Playground",
+    subtitle: "Operational KPIs + explainable health scoring",
     context:
-      "Dental clinics often run on intuition when it comes to delays, cancellations, and chair utilization. This project turns simulated operational data (calendar, treatments, durations, cancellations) into decision-grade signals: where time leaks happen, why they happen, and what to fix first.",
+      "Healthcare operations often rely on intuition when it comes to delays, cancellations, and capacity utilization. This project demonstrates how synthetic, clinically plausible operational data can be transformed into decision-grade signals that highlight where workflow friction occurs, why it happens, and which issues should be addressed first.",
     mentalModel: {
       input: [
-        "Simulated schedule data (appointments, durations, provider)",
-        "Treatment types + expected time ranges",
-        "Cancellation / no-show events",
+        "Synthetic appointment and scheduling events",
+        "Completion, cancellation, and no-show signals",
+        "Basic temporal metadata (creation, scheduling, completion)",
       ],
       transformation: [
-        "Cleaning + normalization (time windows, categories)",
-        "Operational metrics (delays, utilization, variability)",
-        "Explainable heuristics (rule-based + stats)",
+        "Data normalization and validation",
+        "Deterministic KPI computation (rates, lead times, throughput)",
+        "Transparent health scoring with explicit thresholds",
       ],
       output: [
-        "Bottleneck map (where the flow breaks)",
-        "KPIs dashboard (utilization, delay, cancellation patterns)",
-        "Actionable suggestions (what to fix first, and why)",
+        "Operational KPI dashboard",
+        "Clinic health score (0–100) with traffic-light status",
+        "Human-readable reasons highlighting risk signals",
       ],
     },
     technicalChoice: {
-      choice: "Rule-based + statistical signals (instead of heavy ML).",
-      why: "For workflow optimization, interpretability and iteration speed beat model complexity. The goal is operational clarity, not prediction theater.",
+      choice: "Explainable metrics and scoring instead of heavy ML.",
+      why: "For operational monitoring, clarity and trust matter more than predictive complexity. Simple, well-designed metrics enable faster iteration and safer decision-making.",
     },
     deliberateNonChoice:
-      "I intentionally did NOT use deep learning or “predict the future” models—this is about operational leverage, not artificial sophistication.",
+      "I deliberately avoided predictive or black-box models. This demo focuses on operational visibility and explainability rather than forecasting or automation hype.",
     snapshot: {
       hook:
-        "Operational intelligence from dental clinic scheduling and treatment-flow data.",
+        "Turn operational events into clear, explainable workflow health signals.",
       problem:
-        "Clinics don’t know where they lose time, revenue, and patients—everything is based on gut feeling.",
+        "Teams lack visibility into where operational friction emerges and which signals truly matter for day-to-day decisions.",
       approach:
-        "Compute delay/utilization/cancellation signals and generate explainable insights (stats + heuristics) to prioritize workflow fixes.",
-      techStack: "Python, Pandas, Streamlit (light dashboard), minimal ML",
+        "Compute a small set of meaningful KPIs and aggregate them into a transparent health score with explicit reasoning.",
+      techStack: "Next.js, TypeScript, lightweight backend API, Recharts",
       impact:
-        "Bottleneck identification and decision-ready metrics for scheduling and operations (coming soon).",
+        "Provides an architecture-first example of how operational intelligence can be delivered without unnecessary model complexity.",
     },
-    status: "Coming soon",
+    status: "Live",
+    links: {
+      demo: "https://TUO-URL-VERCEL.vercel.app",
+      github: "https://github.com/lucalazzaro/clinic-ops-metrics-playground",
+    },
+    featured: true,
   },
+
+  // … gli altri progetti restano invariati
+
+
   {
     title: "Clinical Decision Support — Rule + ML Hybrid",
     subtitle: "Pragmatic AI, not magic",
