@@ -20,6 +20,7 @@ type Project = {
   title: string;
   subtitle: string;
   context: string;
+  livenote?: string;
   mentalModel: {
     input: string[];
     transformation: string[];
@@ -41,6 +42,7 @@ type Project = {
   links?: {
     demo?: string;
     github?: string;
+    liveNote?: string;
   };
   featured?: boolean;
 };
@@ -52,45 +54,45 @@ const projects: Project[] = [
     subtitle: "Operational KPIs + explainable health scoring",
     context:
       "Healthcare operations often rely on intuition when it comes to delays, cancellations, and capacity utilization. This project demonstrates how synthetic, clinically plausible operational data can be transformed into decision-grade signals that highlight where workflow friction occurs, why it happens, and which issues should be addressed first.",
+    livenote: "Live demo available — architecture-first applied analytics showcase.",
     mentalModel: {
       input: [
         "Synthetic appointment and scheduling events",
         "Completion, cancellation, and no-show signals",
-        "Basic temporal metadata (creation, scheduling, completion)",
+        "Basic temporal metadata",
       ],
       transformation: [
         "Data normalization and validation",
-        "Deterministic KPI computation (rates, lead times, throughput)",
+        "Deterministic KPI computation",
         "Transparent health scoring with explicit thresholds",
       ],
       output: [
         "Operational KPI dashboard",
-        "Clinic health score (0–100) with traffic-light status",
-        "Human-readable reasons highlighting risk signals",
+        "Clinic health score (0–100)",
+        "Human-readable risk signals",
       ],
     },
     technicalChoice: {
       choice: "Explainable metrics and scoring instead of heavy ML.",
-      why: "For operational monitoring, clarity and trust matter more than predictive complexity. Simple, well-designed metrics enable faster iteration and safer decision-making.",
+      why: "Operational monitoring requires trust and clarity, not prediction theater.",
     },
     deliberateNonChoice:
-      "I deliberately avoided predictive or black-box models. This demo focuses on operational visibility and explainability rather than forecasting or automation hype.",
+      "No black-box predictive models or opaque ML pipelines.",
     snapshot: {
-      hook:
-        "Turn operational events into clear, explainable workflow health signals.",
+      hook: "Explainable operational intelligence for healthcare workflows.",
       problem:
-        "Teams lack visibility into where operational friction emerges and which signals truly matter for day-to-day decisions.",
+        "Teams lack visibility into where operational friction emerges.",
       approach:
-        "Compute a small set of meaningful KPIs and aggregate them into a transparent health score with explicit reasoning.",
-      techStack: "Next.js, TypeScript, lightweight backend API, Recharts",
+        "Compute a minimal set of meaningful KPIs and aggregate them transparently.",
+      techStack: "Next.js, TypeScript, Recharts",
       impact:
-        "Provides an architecture-first example of how operational intelligence can be delivered without unnecessary model complexity.",
+        "Architecture-first example of deployable operational analytics.",
     },
     status: "Live",
     links: {
-      demo: "https://TUO-URL-VERCEL.vercel.app",
+      demo: "https://clinic-ops-metrics.vercel.app/",
       github: "https://github.com/lucalazzaro/clinic-ops-metrics-playground",
-    },
+      },
     featured: true,
   },
 
@@ -452,7 +454,7 @@ export default function Home() {
             </div>
           </SectionCard>
 
-          <SectionCard id="projects" title="Selected Projects (Coming Soon)">
+          <SectionCard id="projects" title="Selected Projects">
             <p className="text-white/70">
               These projects are designed to demonstrate system thinking and real-world Med-Tech impact.
               The emphasis is on architecture, workflow leverage, and deployable design—not “more code for the sake of code.”
