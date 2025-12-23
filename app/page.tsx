@@ -96,51 +96,7 @@ const projects: Project[] = [
     featured: true,
   },
 
-  // … gli altri progetti restano invariati
-
-
-  {
-    title: "Clinical Decision Support — Rule + ML Hybrid",
-    subtitle: "Pragmatic AI, not magic",
-    context:
-      "In Med-Tech, pure rules are rigid and pure ML is often opaque. This project demonstrates a hybrid decision-support approach: explicit clinical logic provides guardrails, and a lightweight model improves prioritization—always with a human-readable explanation.",
-    mentalModel: {
-      input: [
-        "Simulated patient attributes (age, smoking, visit frequency)",
-        "Treatment type and simple history markers",
-        "Basic risk indicators (rule-friendly features)",
-      ],
-      transformation: [
-        "Layer 1: explicit clinical rules (guardrails + priorities)",
-        "Layer 2: lightweight ML (logistic regression / tree)",
-        "Explanation layer (feature importance / SHAP-lite)",
-      ],
-      output: [
-        "Risk / priority score",
-        "Human-readable rationale (what drove the result)",
-        "Suggested next action category (follow-up / check / escalate)",
-      ],
-    },
-    technicalChoice: {
-      choice: "Lightweight model + explanation over black-box accuracy.",
-      why: "Clinical decision support lives or dies on trust. A slightly less “accurate” but explainable system is more deployable than an opaque one.",
-    },
-    deliberateNonChoice:
-      "I intentionally did NOT optimize for maximum benchmark accuracy—this is designed for interpretability and safe clinical integration.",
-    snapshot: {
-      hook:
-        "A hybrid clinical decision-support system built for trust and adoption.",
-      problem:
-        "Rules-only systems are rigid; ML-only systems can be opaque. Clinicians need both guardrails and evidence-based scoring.",
-      approach:
-        "Explicit rules provide guardrails; a lightweight model refines prioritization; explanations make the output usable and trustworthy.",
-      techStack: "Scikit-learn, SHAP (or simple feature importance), minimal UI",
-      impact:
-        "Transparent prioritization logic suitable for real clinical workflows (coming soon).",
-    },
-    status: "Coming soon",
-  },
-  {
+ {
   title: "AI Intake → JSON & Triage",
   subtitle: "Schema-first intake processing with downstream gating",
   context:
@@ -183,7 +139,56 @@ const projects: Project[] = [
     github: "https://github.com/lucalazzaro/ai-intake-triage",
   },
   featured: true,
-}
+},
+
+{
+  title: "Multi-Agent Backoffice: Why Humans Still Matter",
+  subtitle: "A comic-style demo of AI failure modes (and accountability).",
+  context:
+    "A simulated MedTech backoffice where each AI agent makes a locally reasonable suggestion — and the system fails when those suggestions collide. The UI makes failure visible (as a comic), then forces a human sign-off step to show accountability.",
+  mentalModel: {
+    input: [
+      "A situation snapshot (backlog, budget, constraints)",
+      "Short free-text context (what the team ‘hears’)",
+      "Simple policies (compliance strict, discount cap)",
+    ],
+    transformation: [
+      "Agents propose actions (structured outputs + confidence/evidence)",
+      "Conflict detector flags collisions (growth vs capacity, discounts vs cash)",
+      "Policy gate blocks unsafe actions (e.g., compliance shortcuts)",
+      "CEO sign-off step enforces human accountability",
+    ],
+    output: [
+      "Agent proposals (comic dialogues)",
+      "Visible collisions + severity",
+      "Rules: allowed / needs approval / blocked",
+      "Post-mortem: what failed and why",
+    ],
+  },
+  technicalChoice: {
+    choice: "Deterministic agent outputs + readable governance layers (no LLM required).",
+    why: "For a portfolio demo, reproducibility beats randomness. The message is about failure modes and governance, not model magic.",
+  },
+  deliberateNonChoice:
+    "I intentionally did NOT build a fully autonomous agentic system — the goal is to show where AI stops and humans must decide.",
+  snapshot: {
+    hook:
+      "A comic-style multi-agent office simulator that makes conflicts, rules, and accountability impossible to ignore.",
+    problem:
+      "Multi-agent systems can sound smart individually and still fail as a system: misalignment, overconfidence, policy blindness, brittleness.",
+    approach:
+      "Structured agent outputs → conflict detection → policy gate → CEO sign-off → post-mortem (all visible in UI).",
+    techStack: "Next.js, TypeScript, Tailwind, deterministic simulation",
+    impact:
+      "Shows governance and human accountability patterns recruiters actually care about (beyond demos that ‘just work’).",
+  },
+  status: "Live",
+  links: {
+    demo: "https://multi-agent-backoffice.vercel.app/",
+    github: "https://github.com/lucalazzaro/multi-agent-backoffice",
+  },
+  featured: true,
+},
 
 ];
 
