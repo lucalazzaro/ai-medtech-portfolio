@@ -424,10 +424,10 @@ export default function Home() {
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
                   Shaping the future of Med-Tech AI integration.
                 </h1>
-                <p className="text-lg md:text-xl text-white/70 max-w-2xl">
+                <p className="text-lg text-white/70 italic tracking-wide">
                   AI is not about having a chatbot on your Home Page.
-                  <br />
-                  </p>
+                </p>
+
 
                 <p className="text-lg md:text-xl text-white/60 max-w-2xl">
                   I combine clinical insight and real-world systems thinking with practical AI engineering
