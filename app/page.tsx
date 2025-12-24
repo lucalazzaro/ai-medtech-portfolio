@@ -425,7 +425,7 @@ export default function Home() {
                   Shaping the future of Med-Tech AI integration.
                 </h1>
                 <p className="text-lg text-white/70 italic tracking-wide">
-                  AI is not about having a chatbot on your Home Page.
+                  AI is not about another chatbot.
                 </p>
 
 
