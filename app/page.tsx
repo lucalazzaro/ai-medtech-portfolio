@@ -424,14 +424,21 @@ export default function Home() {
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
                   Shaping the future of Med-Tech AI integration.
                 </h1>
-
                 <p className="text-lg md:text-xl text-white/70 max-w-2xl">
+                  AI is not about having a chatbot on your Home Page.
+                  <br />
+                  </p>
+
+                <p className="text-lg md:text-xl text-white/60 max-w-2xl">
                   I combine clinical insight and real-world systems thinking with practical AI engineering
                   to build tools that improve patient outcomes and elevate dental care delivery.
                   <br />
+                  </p>
+
+                  <p className="text-lg md:text-xl text-white/60 max-w-2xl">
                   <span className="text-white/60">
                     My goal: design AI-driven systems focused on workflow intelligence, clinical decision support,
-                    and production-ready data-to-impact pipelines.
+                    and production-ready data.
                   </span>
                 </p>
               </div>
@@ -459,22 +466,28 @@ export default function Home() {
 
           <SectionCard id="background" title="Background">
             <p>
-              I come from a multidisciplinary background spanning customer success,
-              clinical support, and operational roles in international tech environments.
-              Working closely with healthcare professionals exposed me to the real friction
-              points of clinical workflows.
-            </p>
+              I come from a multidisciplinary background spanning customer success, clinical support, 
+              and operational roles in international tech environments.
+              </p>
+
             <p>
-              My transition to AI started with hands-on problem solving: prototyping predictive analytics
-              for clinical decision support and exploring how to improve operational efficiency.
-              What began as curiosity became a mission: harness AI to build scalable Med-Tech solutions.
+              Working closely with healthcare professionals exposed me to the real friction points of clinical workflows 
+              — delays, ambiguity, manual workarounds, and systems that technically “work” but fail people.
+            </p>
+                <p>
+                  My transition to AI started with hands-on problem solving.
+                </p>
+            <p>
+              I began prototyping predictive analytics for clinical decision support and experimenting 
+              with ways to improve operational efficiency. What started as curiosity quickly became a mission: 
+              use AI to build scalable Med-Tech solutions that survive contact with reality.
             </p>
           </SectionCard>
 
           <SectionCard id="philosophy" title="AI Philosophy in Med-Tech">
             <p>
-              I believe AI in Med-Tech isn’t about slapping a chatbot on top of a system.
-              It’s an architectural revolution that transforms the entire stack:
+              I believe AI in Med-Tech isn’t just about slapping a chatbot on top of an existing system.
+              It’s an architectural shift that reshapes the entire stack.
             </p>
 
             <ul className="list-disc pl-6 space-y-2 text-white/80">
