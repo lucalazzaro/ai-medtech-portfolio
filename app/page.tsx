@@ -49,6 +49,58 @@ type Project = {
 
 
 const projects: Project[] = [
+   {
+  title: "Clinical Data Quality Gate",
+  subtitle: "Trust before metrics",
+  context:
+    "In medical and dental clinics, data often arrives incomplete, inconsistent, or simply wrong. This project shows a reliability-first data quality layer that cleans and validates incoming records — and blocks downstream usage when trust cannot be established.",
+  livenote:
+    "Live demo available — reliability-first validation and downstream gating.",
+  mentalModel: {
+    input: [
+      "Messy patient records (inconsistent fields and formats)",
+      "Missing or conflicting demographic / clinical values",
+      "Free-text notes (when present)",
+    ],
+    transformation: [
+      "Normalization (formats, field mapping)",
+      "Deterministic validation and plausibility checks",
+      "Explicit trust classification (OK / ATTENTION / BLOCKED)",
+      "Downstream gating with clear, human-readable reasons",
+    ],
+    output: [
+      "Trusted, structured patient records",
+      "Blocked records with clear reason messages",
+      "Suggested next-step actions (what to fix)",
+    ],
+  },
+  technicalChoice: {
+    choice:
+      "Hard validation rules and explicit trust gates; AI is presented only as an assistive extraction layer (not a decision-maker).",
+    why:
+      "In clinical workflows, bad data is more dangerous than missing automation. Trust must be established before analytics or decisions are allowed downstream.",
+  },
+  deliberateNonChoice:
+    "No KPI dashboard, no black-box predictions, and no chatbot-driven decision-making.",
+  snapshot: {
+    hook: "Stop bad data before it contaminates clinical workflows.",
+    problem:
+      "Analytics and automation break when source data cannot be trusted.",
+    approach:
+      "Normalize and validate incoming data, then gate downstream usage with transparent rules.",
+    techStack:
+      "Next.js, TypeScript, Zod",
+    impact:
+      "Production-style data quality gate that protects downstream analytics and automation.",
+  },
+  status: "Live",
+  links: {
+    demo: "https://clinical-data-quality-gate.vercel.app/",
+    github: "https://github.com/lucalazzaro/clinical-data-quality-gate",
+  },
+  featured: true,
+},
+
   {
     title: "Clinic Ops Metrics Playground",
     subtitle: "Operational KPIs + explainable health scoring",
@@ -95,51 +147,6 @@ const projects: Project[] = [
       },
     featured: true,
   },
-
- {
-  title: "AI Intake → JSON & Triage",
-  subtitle: "Schema-first intake processing with downstream gating",
-  context:
-    "Most clinical intake arrives as messy free text. This project demonstrates how unstructured intake can be converted into validated, auditable structured data — explicitly blocking downstream usage when clarification is required.",
-  mentalModel: {
-    input: [
-      "Free-text patient intake",
-      "Channel metadata (web / email / phone)"
-    ],
-    transformation: [
-      "Schema-first extraction",
-      "Validation and normalization",
-      "Audit trail + downstream decision gate"
-    ],
-    output: [
-      "Validated structured intake record",
-      "Triage category and urgency",
-      "Clear next-step recommendation"
-    ],
-  },
-  technicalChoice: {
-    choice: "Strict schema validation and explicit gating over conversational UX.",
-    why: "In clinical workflows, reliability and traceability matter more than fluent dialogue.",
-  },
-  deliberateNonChoice:
-    "No chatbot interface and no black-box predictions.",
-  snapshot: {
-    hook: "Turn messy intake text into production-safe structured data.",
-    problem:
-      "Unvalidated intake data propagates errors and operational friction downstream.",
-    approach:
-      "Schema-first extraction with explicit validation and decision gates.",
-    techStack: "Next.js, TypeScript, Zod",
-    impact:
-      "Higher-quality intake data and safer downstream automation.",
-  },
-  status: "Live",
-  links: {
-    demo: "https://ai-intake-triage.vercel.app/",
-    github: "https://github.com/lucalazzaro/ai-intake-triage",
-  },
-  featured: true,
-},
 
 {
   title: "Multi-Agent Backoffice: Why Humans Still Matter",
@@ -485,12 +492,12 @@ export default function Home() {
           {/* NEW: Technical Stack & Skills */}
           <SectionCard id="skills" title="Technical Stack & Skills">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <InfoBox label="Languages" value="Python, SQL, JavaScript" />
-              <InfoBox label="ML Frameworks" value="PyTorch, TensorFlow, Scikit-Learn" />
-              <InfoBox label="Data & Pipelines" value="Pandas, Airflow, Feature Store patterns" />
-              <InfoBox label="Deployment" value="Docker, FastAPI, AWS (Lambda, EC2, S3)" />
-              <InfoBox label="Frontend (if used)" value="React, HTML/CSS" />
-              <InfoBox label="DevOps" value="CI/CD, Kubernetes, Logging & Monitoring" />
+              <InfoBox label="Languages" value="Python, TypeScript, SQL" />
+              <InfoBox label="ML & AI" value="PyTorch (Transformers), scikit-learn, TensorFlow (working knowledge)" />
+              <InfoBox label="Data & Pipelines" value="Pandas, data validation patterns, feature engineering concepts, feature store patterns (conceptual)" />
+              <InfoBox label="APIs & Deployment" value="FastAPI, Docker, CI/CD (GitHub Actions), AWS (Lambda, EC2, S3 – applied)" />
+              <InfoBox label="Frontend (if used)" value="Next.js, React, HTML/CSS" />
+              <InfoBox label="Ops & Architecture" value="Basic MLOps, logging & monitoring, Airflow and Kubernetes (architectural familiarity)" />
             </div>
           </SectionCard>
 
