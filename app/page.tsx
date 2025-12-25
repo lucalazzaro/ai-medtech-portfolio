@@ -103,51 +103,53 @@ const projects: Project[] = [
 },
 
   {
-    title: "Clinic Ops Metrics Playground",
-    subtitle: "Operational KPIs + explainable health scoring",
-    context:
-      "Healthcare operations often rely on intuition when it comes to delays, cancellations, and capacity utilization. This project demonstrates how synthetic, clinically plausible operational data can be transformed into decision-grade signals that highlight where workflow friction occurs, why it happens, and which issues should be addressed first.",
-    livenote: "Live demo available — architecture-first applied analytics showcase.",
-    mentalModel: {
-      input: [
-        "Synthetic appointment and scheduling events",
-        "Completion, cancellation, and no-show signals",
-        "Basic temporal metadata",
-      ],
-      transformation: [
-        "Data normalization and validation",
-        "Deterministic KPI computation",
-        "Transparent health scoring with explicit thresholds",
-      ],
-      output: [
-        "Operational KPI dashboard",
-        "Clinic health score (0–100)",
-        "Human-readable risk signals",
-      ],
-    },
-    technicalChoice: {
-      choice: "Explainable metrics and scoring instead of heavy ML.",
-      why: "Operational monitoring requires trust and clarity, not prediction theater.",
-    },
-    deliberateNonChoice:
-      "No black-box predictive models or opaque ML pipelines.",
-    snapshot: {
-      hook: "Explainable operational intelligence for healthcare workflows.",
-      problem:
-        "Teams lack visibility into where operational friction emerges.",
-      approach:
-        "Compute a minimal set of meaningful KPIs and aggregate them transparently.",
-      techStack: "Next.js, TypeScript, Recharts",
-      impact:
-        "Architecture-first example of deployable operational analytics.",
-    },
-    status: "Live",
-    links: {
-      demo: "https://clinic-ops-metrics.vercel.app/",
-      github: "https://github.com/lucalazzaro/clinic-ops-metrics-playground",
-      },
-    featured: true,
+  title: "KPI Command Center",
+  subtitle: "Cross-channel KPIs + explainable 7-day forecast",
+  context:
+    "Most teams track a lot of KPIs but still struggle to answer two simple questions: What matters today? And what might break next? This dashboard turns customer, sales, and marketing signals into a clear health status, plain-English drivers, and concrete actions — using synthetic data only.",
+  livenote:
+    "Live demo available — PowerBI-style monitoring with lightweight, explainable ML behavior.",
+  mentalModel: {
+    input: [
+      "Synthetic daily business signals (customer, sales, marketing)",
+      "Region + channel filters (EU/NA/APAC, Email/Chat/Phone)",
+      "Scenario sliders (ticket volume, marketing push)",
+    ],
+    transformation: [
+      "KPI aggregation per area (Customer / Sales / Marketing)",
+      "Overall health score (0–100) + 'Main signal' summary",
+      "Baseline vs model forecast (simulated gradient boosting behavior)",
+    ],
+    output: [
+      "Guided dashboard views (Overview → Area → Actions)",
+      "Human-readable 'why' explanations (drivers)",
+      "Recommended actions with impact level",
+    ],
   },
+  technicalChoice: {
+    choice: "Explainable forecasting + decision signals (not black-box predictions).",
+    why: "Operational decisions need clarity and trust — the model supports judgment, it doesn't replace it.",
+  },
+  deliberateNonChoice:
+    "No opaque end-to-end pipelines, no proprietary data, no 'AI magic' claims.",
+  snapshot: {
+    hook: "A business dashboard that stays readable, even for non-technical people.",
+    problem:
+      "Cross-team metrics are often tracked in silos, so early warning signals are missed.",
+    approach:
+      "Combine a small set of meaningful KPIs into one health view, then explain what's driving changes and what to do next.",
+    techStack: "Next.js, TypeScript, Recharts",
+    impact:
+      "A portfolio-ready example of product-thinking + applied analytics with clear, explainable signals.",
+  },
+  status: "Live",
+  links: {
+    demo: "https://kpi-command-center-self.vercel.app/",
+    github: "https://github.com/lucalazzaro/kpi-command-center",
+  },
+  featured: true,
+},
+
 
 {
   title: "Multi-Agent Backoffice: Why Humans Still Matter",
