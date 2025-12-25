@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Med-Tech Portfolio Hub
 
-## Getting Started
+This repository hosts my personal **AI Engineer portfolio**, focused on real-world Med-Tech systems rather than toy demos.
 
-First, run the development server:
+The goal is simple: show how AI can be **designed, governed, and deployed** in healthcare environments where reliability, trust, and accountability matter.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> AI is not about having a chatbot on your Home Page.  
+> It’s about building systems that survive contact with reality.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## What this portfolio is about
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+I design **AI-driven systems** that sit inside real clinical and operational workflows.
 
-## Learn More
+That means:
+- data that is messy, incomplete, and sometimes wrong
+- constraints that come from compliance, safety, and human processes
+- decisions that must be explainable, auditable, and defensible
 
-To learn more about Next.js, take a look at the following resources:
+This portfolio emphasizes **system thinking over model hype**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Core focus areas
 
-## Deploy on Vercel
+- **Workflow Intelligence**  
+  Turning operational signals into decision-grade insights.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Clinical Decision Support**  
+  AI that assists clinicians without replacing responsibility or judgment.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Data Quality & Validation**  
+  Trust gates before analytics, automation, or prediction.
+
+- **Deployable AI Systems**  
+  From architecture to production-ready pipelines, not notebooks.
+
+---
+
+## Philosophy
+
+AI in Med-Tech is not a UI feature.
+
+It’s an architectural shift that affects:
+- how data is collected and validated  
+- how decisions are made and explained  
+- how responsibility is enforced when systems fail  
+
+I deliberately design systems that **expose failure modes**, conflicts, and trade-offs — because that’s where real engineering lives.
+
+---
+
+## Selected projects
+
+Each project in this portfolio is designed to demonstrate:
+- clear system boundaries
+- explicit assumptions
+- human-in-the-loop governance
+- production-style thinking
+
+You won’t find:
+- black-box “magic” predictions  
+- chatbot-driven decision making  
+- dashboards built just to look impressive  
+
+You *will* find:
+- transparent rules
+- explainable signals
+- failure made visible
+
+(See the live portfolio for detailed project breakdowns.)
+
+---
+
+## Tech stack (high level)
+
+- **Languages:** Python, TypeScript, SQL  
+- **AI / ML:** scikit-learn, PyTorch (Transformers), TensorFlow (working knowledge)  
+- **Data:** Pandas, validation patterns, feature engineering concepts  
+- **APIs & Deployment:** FastAPI, Docker, CI/CD (GitHub Actions), AWS  
+- **Frontend:** Next.js, React, Tailwind CSS  
+- **Architecture:** basic MLOps, monitoring, Airflow & Kubernetes (architectural familiarity)
+
+---
+
+## Live portfolio
+
+👉 **https://lucalazzaro-ai-medtech-portfolio.vercel.app**
+
+---
+
+## Contact
+
+If you’re building Med-Tech products and care about real-world deployment — not demos — feel free to reach out.
+
+- Email  
+- LinkedIn  
+- GitHub  
+- Calendly  
+
+---
+
+© 2025 Luca — AI Engineer, Med-Tech
