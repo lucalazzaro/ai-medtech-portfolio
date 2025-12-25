@@ -12,6 +12,7 @@ const sections = [
   { id: "background", title: "Background" },
   { id: "philosophy", title: "AI Philosophy" },
   { id: "skills", title: "Technical Stack & Skills" },
+  { id: "experience", title: "Beyond Models: Product & Delivery Experience" },
   { id: "projects", title: "Selected Projects" },
   { id: "contact", title: "Contact" },
 ];
@@ -512,6 +513,38 @@ export default function Home() {
               <InfoBox label="Frontend (if used)" value="Next.js, React, HTML/CSS" />
               <InfoBox label="Ops & Architecture" value="Basic MLOps, logging & monitoring, Airflow and Kubernetes (architectural familiarity)" />
             </div>
+          </SectionCard>
+
+          <SectionCard id="experience" title="Beyond Models: Product & Delivery Experience">
+            <p>
+              Before focusing full-time on AI engineering, I worked in international tech environments 
+              where systems are built, shipped, supported, and held accountable.
+            </p>
+            <p>
+              What this translates to in practice:
+              </p>
+            <p>
+              This background shapes how I design AI today: 
+              not as isolated models, but as products that must survive users, processes, and constraints.
+            </p>
+            <ul className="list-disc pl-6 space-y-2 text-white/80">
+              <li>Product ownership and roadmap thinking: turning vague problems into scoped, deliverable systems</li>
+              <li>Cross-functional collaboration with clinical, commercial, and engineering teams.</li>
+              <li>Workflow-first design: AI that fits existing processes instead of fighting them.</li>
+              <li>Stakeholder-ready communication: explaining trade-offs, risks, and limitations clearly</li>
+            </ul>
+                <p>
+              Tools I’ve used in real delivery contexts (not tutorials):
+              </p>
+            <ul className="list-disc pl-6 space-y-2 text-white/80">
+              <li>Jira for backlog, prioritization, and delivery tracking</li>
+              <li>Power BI for operational reporting and decision support</li>
+              <li>Salesforce for CRM-driven workflows and process automation</li>
+              <li>Office tools as glue for documentation, alignment, and decision-making</li>
+            </ul>
+            <p>
+              This experience is why I care about governance, failure modes, and human-in-the-loop design as much as models and metrics.
+            </p>
           </SectionCard>
 
           <SectionCard id="projects" title="Selected Projects">
