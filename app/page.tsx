@@ -489,17 +489,13 @@ export default function Home() {
 
           <SectionCard id="philosophy" title="AI Philosophy in Med-Tech">
             <p>
-              I believe AI in Med-Tech isn’t just about slapping a chatbot on top of an existing system.
-              It’s an architectural shift that reshapes the entire stack.
+              I believe AI in Med-Tech is not about adding a chatbot on top of existing systems.
+              It’s an architectural shift that reshapes how data, decisions, and responsibility flow across the stack.
             </p>
-
-            <ul className="list-disc pl-6 space-y-2 text-white/80">
-              <li>Data-centric engineering — quality and context matter more than flashy models.</li>
-              <li>Interpretable and trustworthy AI — clinicians must understand and trust what they deploy.</li>
-              <li>Integrated workflows — models are parts of ecosystems, not standalone toys.</li>
-              <li>Deployment at scale — from edge devices in clinics to cloud-backed platforms.</li>
-            </ul>
-
+            <p>
+              I focus on data-centric engineering, interpretable decision support, and workflow-integrated AI that clinicians can understand and trust 
+              — from edge devices in clinics to cloud-backed platforms.
+            </p>
             <p>
               AI isn’t a feature. It’s a paradigm shift. I build it that way.
             </p>
@@ -556,33 +552,19 @@ export default function Home() {
           <SectionCard id="experience" title="Beyond Models: Product & Delivery Experience">
             <p>
               Before focusing full-time on AI engineering, I worked in international tech environments 
-              where systems are built, shipped, supported, and held accountable.
+              where systems are built, shipped, and held accountable.
             </p>
             <p>
-              What this translates to in practice:
+              This experience shapes how I design AI today: 
+              not as isolated models, but as products that must survive real users, workflows, and constraints.
               </p>
             <p>
-              This background shapes how I design AI today: 
-              not as isolated models, but as products that must survive users, processes, and constraints.
+              I bring a product and delivery mindset to AI, with experience in cross-functional collaboration, 
+              workflow-first design, and stakeholder-ready communication — using tools like Jira, Power BI, and Salesforce in real delivery contexts.
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-white/80">
-              <li>Product ownership and roadmap thinking: turning vague problems into scoped, deliverable systems</li>
-              <li>Cross-functional collaboration with clinical, commercial, and engineering teams.</li>
-              <li>Workflow-first design: AI that fits existing processes instead of fighting them.</li>
-              <li>Stakeholder-ready communication: explaining trade-offs, risks, and limitations clearly</li>
-            </ul>
-                <p>
-              Tools I’ve used in real delivery contexts (not tutorials):
+              <p>
+              This is why I care about governance, failure modes, and human-in-the-loop design as much as models and metrics.
               </p>
-            <ul className="list-disc pl-6 space-y-2 text-white/80">
-              <li>Jira for backlog, prioritization, and delivery tracking</li>
-              <li>Power BI for operational reporting and decision support</li>
-              <li>Salesforce for CRM-driven workflows and process automation</li>
-              <li>Office tools as glue for documentation, alignment, and decision-making</li>
-            </ul>
-            <p>
-              This experience is why I care about governance, failure modes, and human-in-the-loop design as much as models and metrics.
-            </p>
           </SectionCard>
 
           <SectionCard id="projects" title="Selected Projects">
