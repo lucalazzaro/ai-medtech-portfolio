@@ -434,7 +434,7 @@ export default function Home() {
 
                 <p className="text-lg md:text-xl text-white/60 max-w-2xl">
                   I combine clinical insight and real-world systems thinking with practical AI engineering
-                  to build tools that improve patient outcomes and elevate dental care delivery.
+                  to build tools that improve outcomes and elevate the experience.
                   <br />
                   </p>
 
@@ -505,17 +505,53 @@ export default function Home() {
             </p>
           </SectionCard>
 
-          {/* NEW: Technical Stack & Skills */}
-          <SectionCard id="skills" title="Technical Stack & Skills">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <InfoBox label="Languages" value="Python, TypeScript, SQL" />
-              <InfoBox label="ML & AI" value="PyTorch (Transformers), scikit-learn, TensorFlow (working knowledge)" />
-              <InfoBox label="Data & Pipelines" value="Pandas, data validation patterns, feature engineering concepts, feature store patterns (conceptual)" />
-              <InfoBox label="APIs & Deployment" value="FastAPI, Docker, CI/CD (GitHub Actions), AWS (Lambda, EC2, S3 – applied)" />
-              <InfoBox label="Frontend (if used)" value="Next.js, React, HTML/CSS" />
-              <InfoBox label="Ops & Architecture" value="Basic MLOps, logging & monitoring, Airflow and Kubernetes (architectural familiarity)" />
-            </div>
-          </SectionCard>
+          {/* UPDATED: Technical Stack & Skills */}
+<SectionCard id="skills" title="Technical Stack & Skills">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <InfoBox
+      label="Languages"
+      value="Python, TypeScript, SQL"
+    />
+
+    <InfoBox
+      label="Applied AI & Decision Systems"
+      value="Explainable ML concepts, rule-based + model-assisted decision support, human-in-the-loop patterns, AI failure modes and governance"
+    />
+
+    <InfoBox
+      label="ML Foundations (working knowledge)"
+      value="scikit-learn, gradient boosting concepts, basic forecasting patterns, baselines and model evaluation"
+    />
+
+    <InfoBox
+      label="Data Quality & Pipelines"
+      value="Data validation patterns, schema enforcement, trust gating, deterministic preprocessing, feature reasoning"
+    />
+
+    <InfoBox
+      label="APIs & Deployment"
+      value="FastAPI-style APIs, Docker basics, CI/CD (GitHub Actions), cloud deployment patterns (AWS: Lambda, EC2, S3)"
+    />
+
+    <InfoBox
+      label="Frontend for Decision UIs"
+      value="Next.js, React, Tailwind, data-driven dashboards, guided UX for non-technical users"
+    />
+
+    <InfoBox
+      label="Systems & Architecture"
+      value="System design thinking, observability concepts, policy gates, basic MLOps principles, architectural familiarity with Airflow and Kubernetes"
+    />
+  </div>
+
+  {/* Positioning note */}
+  <p className="mt-4 text-sm text-gray-600 leading-relaxed">
+    Framework-heavy deep learning is intentionally not the focus of this portfolio.
+    The emphasis is on deployable systems, trust, and decision-making under real-world constraints.
+  </p>
+</SectionCard>
+
+
 
           <SectionCard id="experience" title="Beyond Models: Product & Delivery Experience">
             <p>
