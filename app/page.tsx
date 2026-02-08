@@ -364,7 +364,7 @@ export default function Home() {
             <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-sm text-white/60">Luca Lazzaro</p>
-                <p className="text-lg font-semibold">AI Engineer, Med-Tech</p>
+                <p className="text-lg font-semibold">AI Product Owner, Enabler, Solution Architect (Med-Tech)</p>
               </div>
 
               <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/20">
