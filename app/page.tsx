@@ -361,21 +361,14 @@ export default function Home() {
         {/* SIDEBAR */}
         <aside className="md:sticky md:top-10 h-fit">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-            <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center">
+
               <div>
                 <p className="text-sm text-white/60">Luca Lazzaro</p>
                 <p className="text-lg font-semibold">AI Product Owner, Enabler, Solution Architect (Med-Tech)</p>
               </div>
 
-              <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/20">
-                <Image
-                  src="/profile.jpg"
-                  alt="Profile photo"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+              
             </div>
 
             <nav className="mt-6">
