@@ -4,14 +4,14 @@ const LINKS = {
   email: "mailto:lazzaro_luca@hotmail.com",
   linkedin: "https://www.linkedin.com/in/luca-lazzaro-54888787",
   github: "https://github.com/lucalazzaro",
-  calendly: "https://calendly.com/lazzaro_luca", 
+  calendly: "https://calendly.com/lazzaro_luca",
 };
 
 const sections = [
   { id: "intro", title: "Overview" },
   { id: "background", title: "Background" },
   { id: "philosophy", title: "AI Philosophy" },
-  { id: "skills", title: "Technical Stack & Skills" },
+  { id: "skills", title: "Applied Stack & Skills" },
   { id: "experience", title: "Beyond Models: Product & Delivery Experience" },
   { id: "projects", title: "Selected Projects" },
   { id: "contact", title: "Contact" },
@@ -39,7 +39,7 @@ type Project = {
     techStack: string;
     impact: string;
   };
-    status: string;
+  status: string;
   links?: {
     demo?: string;
     github?: string;
@@ -48,158 +48,152 @@ type Project = {
   featured?: boolean;
 };
 
-
 const projects: Project[] = [
-   {
-  title: "Clinical Data Quality Gate",
-  subtitle: "Trust before metrics",
-  context:
-    "In medical and dental clinics, data often arrives incomplete, inconsistent, or simply wrong. This project shows a reliability-first data quality layer that cleans and validates incoming records — and blocks downstream usage when trust cannot be established.",
-  livenote:
-    "Live demo available — reliability-first validation and downstream gating.",
-  mentalModel: {
-    input: [
-      "Messy patient records (inconsistent fields and formats)",
-      "Missing or conflicting demographic / clinical values",
-      "Free-text notes (when present)",
-    ],
-    transformation: [
-      "Normalization (formats, field mapping)",
-      "Deterministic validation and plausibility checks",
-      "Explicit trust classification (OK / ATTENTION / BLOCKED)",
-      "Downstream gating with clear, human-readable reasons",
-    ],
-    output: [
-      "Trusted, structured patient records",
-      "Blocked records with clear reason messages",
-      "Suggested next-step actions (what to fix)",
-    ],
-  },
-  technicalChoice: {
-    choice:
-      "Hard validation rules and explicit trust gates; AI is presented only as an assistive extraction layer (not a decision-maker).",
-    why:
-      "In clinical workflows, bad data is more dangerous than missing automation. Trust must be established before analytics or decisions are allowed downstream.",
-  },
-  deliberateNonChoice:
-    "No KPI dashboard, no black-box predictions, and no chatbot-driven decision-making.",
-  snapshot: {
-    hook: "Stop bad data before it contaminates clinical workflows.",
-    problem:
-      "Analytics and automation break when source data cannot be trusted.",
-    approach:
-      "Normalize and validate incoming data, then gate downstream usage with transparent rules.",
-    techStack:
-      "Next.js, TypeScript, Zod",
-    impact:
-      "Production-style data quality gate that protects downstream analytics and automation.",
-  },
-  status: "Live",
-  links: {
-    demo: "https://clinical-data-quality-gate.vercel.app/",
-    github: "https://github.com/lucalazzaro/clinical-data-quality-gate",
-  },
-  featured: true,
-},
-
   {
-  title: "KPI Command Center",
-  subtitle: "Cross-channel KPIs + explainable 7-day forecast",
-  context:
-    "Most teams track a lot of KPIs but still struggle to answer two simple questions: What matters today? And what might break next? This dashboard turns customer, sales, and marketing signals into a clear health status, plain-English drivers, and concrete actions — using synthetic data only.",
-  livenote:
-    "Live demo available — PowerBI-style monitoring with lightweight, explainable ML behavior.",
-  mentalModel: {
-    input: [
-      "Synthetic daily business signals (customer, sales, marketing)",
-      "Region + channel filters (EU/NA/APAC, Email/Chat/Phone)",
-      "Scenario sliders (ticket volume, marketing push)",
-    ],
-    transformation: [
-      "KPI aggregation per area (Customer / Sales / Marketing)",
-      "Overall health score (0–100) + 'Main signal' summary",
-      "Baseline vs model forecast (simulated gradient boosting behavior)",
-    ],
-    output: [
-      "Guided dashboard views (Overview → Area → Actions)",
-      "Human-readable 'why' explanations (drivers)",
-      "Recommended actions with impact level",
-    ],
+    title: "Clinical Data Quality Gate",
+    subtitle: "Trust before metrics",
+    context:
+      "In medical and dental clinics, data often arrives incomplete, inconsistent, or simply wrong. This project shows a reliability-first data quality layer that cleans and validates incoming records — and blocks downstream usage when trust cannot be established.",
+    livenote:
+      "Live demo available — reliability-first validation and downstream gating.",
+    mentalModel: {
+      input: [
+        "Messy patient records (inconsistent fields and formats)",
+        "Missing or conflicting demographic / clinical values",
+        "Free-text notes (when present)",
+      ],
+      transformation: [
+        "Normalization (formats, field mapping)",
+        "Deterministic validation and plausibility checks",
+        "Explicit trust classification (OK / ATTENTION / BLOCKED)",
+        "Downstream gating with clear, human-readable reasons",
+      ],
+      output: [
+        "Trusted, structured patient records",
+        "Blocked records with clear reason messages",
+        "Suggested next-step actions (what to fix)",
+      ],
+    },
+    technicalChoice: {
+      choice:
+        "Hard validation rules and explicit trust gates; AI is presented only as an assistive extraction layer (not a decision-maker).",
+      why:
+        "In clinical workflows, bad data is more dangerous than missing automation. Trust must be established before analytics or decisions are allowed downstream.",
+    },
+    deliberateNonChoice:
+      "No KPI dashboard, no black-box predictions, and no chatbot-driven decision-making.",
+    snapshot: {
+      hook: "Stop bad data before it contaminates clinical workflows.",
+      problem: "Analytics and automation break when source data cannot be trusted.",
+      approach:
+        "Normalize and validate incoming data, then gate downstream usage with transparent rules.",
+      techStack: "Next.js, TypeScript, Zod",
+      impact:
+        "Production-style data quality gate that protects downstream analytics and automation.",
+    },
+    status: "Live",
+    links: {
+      demo: "https://clinical-data-quality-gate.vercel.app/",
+      github: "https://github.com/lucalazzaro/clinical-data-quality-gate",
+    },
+    featured: true,
   },
-  technicalChoice: {
-    choice: "Explainable forecasting + decision signals (not black-box predictions).",
-    why: "Operational decisions need clarity and trust — the model supports judgment, it doesn't replace it.",
+  {
+    title: "KPI Command Center",
+    subtitle: "Cross-channel KPIs + explainable 7-day forecast",
+    context:
+      "Most teams track many KPIs but still struggle to answer: What matters today? And what might break next? This dashboard turns customer, sales, and marketing signals into a clear health status, plain-English drivers, and concrete actions — using synthetic data only.",
+    livenote:
+      "Live demo available — monitoring with lightweight, explainable ML behavior.",
+    mentalModel: {
+      input: [
+        "Synthetic daily business signals (customer, sales, marketing)",
+        "Region + channel filters (EU/NA/APAC, Email/Chat/Phone)",
+        "Scenario sliders (ticket volume, marketing push)",
+      ],
+      transformation: [
+        "KPI aggregation per area (Customer / Sales / Marketing)",
+        "Overall health score (0–100) + 'Main signal' summary",
+        "Baseline vs model forecast (simulated gradient boosting behavior)",
+      ],
+      output: [
+        "Guided dashboard views (Overview → Area → Actions)",
+        "Human-readable 'why' explanations (drivers)",
+        "Recommended actions with impact level",
+      ],
+    },
+    technicalChoice: {
+      choice: "Explainable forecasting + decision signals (not black-box predictions).",
+      why: "Operational decisions need clarity and trust — the model supports judgment, it doesn't replace it.",
+    },
+    deliberateNonChoice:
+      "No opaque end-to-end pipelines, no proprietary data, no 'AI magic' claims.",
+    snapshot: {
+      hook: "A business dashboard that stays readable, even for non-technical people.",
+      problem:
+        "Cross-team metrics are often tracked in silos, so early warning signals are missed.",
+      approach:
+        "Combine a small set of meaningful KPIs into one health view, then explain what's driving changes and what to do next.",
+      techStack: "Next.js, TypeScript, Recharts",
+      impact:
+        "A portfolio-ready example of product-thinking + applied analytics with clear, explainable signals.",
+    },
+    status: "Live",
+    links: {
+      demo: "https://kpi-command-center-self.vercel.app/",
+      github: "https://github.com/lucalazzaro/kpi-command-center",
+    },
+    featured: true,
   },
-  deliberateNonChoice:
-    "No opaque end-to-end pipelines, no proprietary data, no 'AI magic' claims.",
-  snapshot: {
-    hook: "A business dashboard that stays readable, even for non-technical people.",
-    problem:
-      "Cross-team metrics are often tracked in silos, so early warning signals are missed.",
-    approach:
-      "Combine a small set of meaningful KPIs into one health view, then explain what's driving changes and what to do next.",
-    techStack: "Next.js, TypeScript, Recharts",
-    impact:
-      "A portfolio-ready example of product-thinking + applied analytics with clear, explainable signals.",
+  {
+    title: "Multi-Agent Backoffice: Why Humans Still Matter",
+    subtitle: "A comic-style demo of AI failure modes (and accountability).",
+    context:
+      "A simulated MedTech backoffice where each AI agent makes a locally reasonable suggestion — and the system fails when those suggestions collide. The UI makes failure visible (as a comic), then forces a human sign-off step to show accountability.",
+    mentalModel: {
+      input: [
+        "A situation snapshot (backlog, budget, constraints)",
+        "Short free-text context (what the team ‘hears’)",
+        "Simple policies (compliance strict, discount cap)",
+      ],
+      transformation: [
+        "Agents propose actions (structured outputs + confidence/evidence)",
+        "Conflict detector flags collisions (growth vs capacity, discounts vs cash)",
+        "Policy gate blocks unsafe actions (e.g., compliance shortcuts)",
+        "CEO sign-off step enforces human accountability",
+      ],
+      output: [
+        "Agent proposals (comic dialogues)",
+        "Visible collisions + severity",
+        "Rules: allowed / needs approval / blocked",
+        "Post-mortem: what failed and why",
+      ],
+    },
+    technicalChoice: {
+      choice:
+        "Deterministic agent outputs + readable governance layers (no LLM required).",
+      why: "For a portfolio demo, reproducibility beats randomness. The message is about failure modes and governance, not model magic.",
+    },
+    deliberateNonChoice:
+      "I intentionally did NOT build a fully autonomous agentic system — the goal is to show where AI stops and humans must decide.",
+    snapshot: {
+      hook:
+        "A comic-style multi-agent office simulator that makes conflicts, rules, and accountability impossible to ignore.",
+      problem:
+        "Multi-agent systems can sound smart individually and still fail as a system: misalignment, overconfidence, policy blindness, brittleness.",
+      approach:
+        "Structured agent outputs → conflict detection → policy gate → CEO sign-off → post-mortem (all visible in UI).",
+      techStack: "Next.js, TypeScript, Tailwind, deterministic simulation",
+      impact:
+        "Shows governance and human accountability patterns recruiters actually care about (beyond demos that ‘just work’).",
+    },
+    status: "Live",
+    links: {
+      demo: "https://multi-agent-backoffice.vercel.app/",
+      github: "https://github.com/lucalazzaro/multi-agent-backoffice",
+    },
+    featured: true,
   },
-  status: "Live",
-  links: {
-    demo: "https://kpi-command-center-self.vercel.app/",
-    github: "https://github.com/lucalazzaro/kpi-command-center",
-  },
-  featured: true,
-},
-
-
-{
-  title: "Multi-Agent Backoffice: Why Humans Still Matter",
-  subtitle: "A comic-style demo of AI failure modes (and accountability).",
-  context:
-    "A simulated MedTech backoffice where each AI agent makes a locally reasonable suggestion — and the system fails when those suggestions collide. The UI makes failure visible (as a comic), then forces a human sign-off step to show accountability.",
-  mentalModel: {
-    input: [
-      "A situation snapshot (backlog, budget, constraints)",
-      "Short free-text context (what the team ‘hears’)",
-      "Simple policies (compliance strict, discount cap)",
-    ],
-    transformation: [
-      "Agents propose actions (structured outputs + confidence/evidence)",
-      "Conflict detector flags collisions (growth vs capacity, discounts vs cash)",
-      "Policy gate blocks unsafe actions (e.g., compliance shortcuts)",
-      "CEO sign-off step enforces human accountability",
-    ],
-    output: [
-      "Agent proposals (comic dialogues)",
-      "Visible collisions + severity",
-      "Rules: allowed / needs approval / blocked",
-      "Post-mortem: what failed and why",
-    ],
-  },
-  technicalChoice: {
-    choice: "Deterministic agent outputs + readable governance layers (no LLM required).",
-    why: "For a portfolio demo, reproducibility beats randomness. The message is about failure modes and governance, not model magic.",
-  },
-  deliberateNonChoice:
-    "I intentionally did NOT build a fully autonomous agentic system — the goal is to show where AI stops and humans must decide.",
-  snapshot: {
-    hook:
-      "A comic-style multi-agent office simulator that makes conflicts, rules, and accountability impossible to ignore.",
-    problem:
-      "Multi-agent systems can sound smart individually and still fail as a system: misalignment, overconfidence, policy blindness, brittleness.",
-    approach:
-      "Structured agent outputs → conflict detection → policy gate → CEO sign-off → post-mortem (all visible in UI).",
-    techStack: "Next.js, TypeScript, Tailwind, deterministic simulation",
-    impact:
-      "Shows governance and human accountability patterns recruiters actually care about (beyond demos that ‘just work’).",
-  },
-  status: "Live",
-  links: {
-    demo: "https://multi-agent-backoffice.vercel.app/",
-    github: "https://github.com/lucalazzaro/multi-agent-backoffice",
-  },
-  featured: true,
-},
-
 ];
 
 function Pill({ children }: { children: React.ReactNode }) {
@@ -278,37 +272,38 @@ function ProjectCard({ project }: { project: Project }) {
 
       <div className="mt-5 space-y-5">
         <p className="text-white/75">{project.context}</p>
+
         {project.links ? (
-  <div className="mt-4 flex flex-wrap gap-3">
-    {project.links.demo ? (
-      <a
-        href={project.links.demo}
-        target="_blank"
-        rel="noreferrer"
-        className="rounded-xl bg-white text-black px-4 py-2 text-sm font-medium hover:bg-white/90 transition"
-      >
-        Live Demo
-      </a>
-    ) : null}
+          <div className="mt-4 flex flex-wrap gap-3">
+            {project.links.demo ? (
+              <a
+                href={project.links.demo}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-xl bg-white text-black px-4 py-2 text-sm font-medium hover:bg-white/90 transition"
+              >
+                Live Demo
+              </a>
+            ) : null}
 
-    {project.links.github ? (
-      <a
-        href={project.links.github}
-        target="_blank"
-        rel="noreferrer"
-        className="rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm hover:bg-white/10 transition"
-      >
-        GitHub
-      </a>
-    ) : null}
+            {project.links.github ? (
+              <a
+                href={project.links.github}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm hover:bg-white/10 transition"
+              >
+                GitHub
+              </a>
+            ) : null}
 
-    {project.featured ? (
-      <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs uppercase tracking-widest text-white/60">
-        Featured
-      </span>
-    ) : null}
-  </div>
-) : null}
+            {project.featured ? (
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs uppercase tracking-widest text-white/60">
+                Featured
+              </span>
+            ) : null}
+          </div>
+        ) : null}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <InfoBox label="Input" value={project.mentalModel.input.join(" • ")} />
@@ -362,13 +357,12 @@ export default function Home() {
         <aside className="md:sticky md:top-10 h-fit">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <div className="flex items-center">
-
               <div>
                 <p className="text-sm text-white/60">Luca Lazzaro</p>
-                <p className="text-lg font-semibold">AI Product Owner, Enabler, Solution Architect (Med-Tech)</p>
+                <p className="text-lg font-semibold">
+                  Applied AI Specialist – Healthcare Decision Systems
+                </p>
               </div>
-
-              
             </div>
 
             <nav className="mt-6">
@@ -418,24 +412,23 @@ export default function Home() {
             <div className="flex items-start justify-between gap-8">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                  Shaping the future of Med-Tech AI integration.
+                  Applied AI for healthcare decision systems.
                 </h1>
+
                 <p className="text-lg text-white/70 italic tracking-wide">
-                  AI is not about another chatbot.
+                  Not another chatbot — systems people can trust.
                 </p>
 
+                <p className="text-lg md:text-xl text-white/60 max-w-2xl">
+                  I design workflow-integrated AI for regulated environments:
+                  decision support, data quality gates, and governance-aware
+                  automation.
+                </p>
 
                 <p className="text-lg md:text-xl text-white/60 max-w-2xl">
-                  I combine clinical insight and real-world systems thinking with practical AI engineering
-                  to build tools that improve outcomes and elevate the experience.
-                  <br />
-                  </p>
-
-                  <p className="text-lg md:text-xl text-white/60 max-w-2xl">
-                  <span className="text-white/60">
-                    My goal: design AI-driven systems focused on workflow intelligence, clinical decision support,
-                    and production-ready data.
-                  </span>
+                  My focus is <span className="text-white/70">deployable</span>{" "}
+                  systems with clear decision boundaries, explainability, and
+                  real operational adoption.
                 </p>
               </div>
 
@@ -453,117 +446,126 @@ export default function Home() {
             </div>
 
             <div className="flex flex-wrap gap-2">
+              <Pill>Decision Support Systems</Pill>
               <Pill>Workflow Intelligence</Pill>
-              <Pill>Clinical Decision Support</Pill>
               <Pill>Data Quality & Validation</Pill>
-              <Pill>Deployable AI Systems</Pill>
+              <Pill>Governed AI</Pill>
             </div>
           </section>
 
           <SectionCard id="background" title="Background">
             <p>
-              I come from a multidisciplinary background spanning customer success, clinical support, 
-              and operational roles in international tech environments.
-              </p>
+              I come from a multidisciplinary background spanning customer
+              success, clinical support, and operational roles in international
+              tech environments.
+            </p>
 
             <p>
-              Working closely with healthcare professionals exposed me to the real friction points of clinical workflows 
-              — delays, ambiguity, manual workarounds, and systems that technically “work” but fail people.
+              Working closely with healthcare professionals exposed me to the
+              real friction points of clinical workflows — delays, ambiguity,
+              manual workarounds, and systems that technically “work” but fail
+              people.
             </p>
-                <p>
-                  My transition to AI started with hands-on problem solving.
-                </p>
+
+            <p>My transition to AI started with hands-on problem solving.</p>
+
             <p>
-              I began prototyping predictive analytics for clinical decision support and experimenting 
-              with ways to improve operational efficiency. What started as curiosity quickly became a mission: 
-              use AI to build scalable Med-Tech solutions that survive contact with reality.
+              I began prototyping decision support patterns and reliability-first
+              data foundations. What started as curiosity became a mission: build
+              MedTech AI that survives contact with reality.
             </p>
           </SectionCard>
 
           <SectionCard id="philosophy" title="AI Philosophy in Med-Tech">
             <p>
-              I believe AI in Med-Tech is not about adding a chatbot on top of existing systems.
-              It’s an architectural shift that reshapes how data, decisions, and responsibility flow across the stack.
+              AI in Med-Tech is not about adding a chatbot on top of existing
+              systems. It’s an architectural shift that reshapes how data,
+              decisions, and responsibility flow across the stack.
             </p>
             <p>
-              I focus on data-centric engineering, interpretable decision support, and workflow-integrated AI that clinicians can understand and trust 
-              — from edge devices in clinics to cloud-backed platforms.
+              I focus on data-centric engineering, interpretable decision
+              support, and workflow-integrated AI that clinicians can understand
+              and trust — with governance, safety, and adoption treated as core
+              design constraints.
             </p>
-            <p>
-              AI isn’t a feature. It’s a paradigm shift. I build it that way.
+            <p>Technology only matters when it works under real constraints.</p>
+          </SectionCard>
+
+          {/* Technical Stack & Skills (repositioned to “applied”) */}
+          <SectionCard id="skills" title="Applied Stack & Skills">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <InfoBox label="Languages" value="Python (applied), SQL, TypeScript" />
+
+              <InfoBox
+                label="Applied AI & Decision Systems"
+                value="Rule-based + model-assisted decision support, human-in-the-loop patterns, explainability, failure modes, governance-aware workflows"
+              />
+
+              <InfoBox
+                label="ML Foundations (working knowledge)"
+                value="Baselines, model evaluation, gradient boosting concepts, lightweight forecasting patterns"
+              />
+
+              <InfoBox
+                label="Data Quality & Pipelines"
+                value="Validation patterns, schema enforcement, trust gating, deterministic preprocessing, edge-case handling"
+              />
+
+              <InfoBox
+                label="APIs & Deployment (pragmatic)"
+                value="API prototyping (FastAPI-style), container basics, CI/CD fundamentals, deploy patterns (serverless/VM), monitoring basics"
+              />
+
+              <InfoBox
+                label="Frontend for Decision UIs"
+                value="Next.js, React, Tailwind — dashboards and guided UX for non-technical users"
+              />
+
+              <InfoBox
+                label="Systems & Architecture (conceptual)"
+                value="System design thinking, observability concepts, policy gates, MLOps basics, reliability-first design"
+              />
+            </div>
+
+            <p className="mt-4 text-sm text-white/60 leading-relaxed">
+              Framework-heavy deep learning is intentionally not the focus of
+              this portfolio. The emphasis is on deployable systems, trust, and
+              decision-making under real-world constraints.
             </p>
           </SectionCard>
 
-          {/* UPDATED: Technical Stack & Skills */}
-<SectionCard id="skills" title="Technical Stack & Skills">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <InfoBox
-      label="Languages"
-      value="Python, TypeScript, SQL"
-    />
-
-    <InfoBox
-      label="Applied AI & Decision Systems"
-      value="Explainable ML concepts, rule-based + model-assisted decision support, human-in-the-loop patterns, AI failure modes and governance"
-    />
-
-    <InfoBox
-      label="ML Foundations (working knowledge)"
-      value="scikit-learn, gradient boosting concepts, basic forecasting patterns, baselines and model evaluation"
-    />
-
-    <InfoBox
-      label="Data Quality & Pipelines"
-      value="Data validation patterns, schema enforcement, trust gating, deterministic preprocessing, feature reasoning"
-    />
-
-    <InfoBox
-      label="APIs & Deployment"
-      value="FastAPI-style APIs, Docker basics, CI/CD (GitHub Actions), cloud deployment patterns (AWS: Lambda, EC2, S3)"
-    />
-
-    <InfoBox
-      label="Frontend for Decision UIs"
-      value="Next.js, React, Tailwind, data-driven dashboards, guided UX for non-technical users"
-    />
-
-    <InfoBox
-      label="Systems & Architecture"
-      value="System design thinking, observability concepts, policy gates, basic MLOps principles, architectural familiarity with Airflow and Kubernetes"
-    />
-  </div>
-
-  {/* Positioning note */}
-  <p className="mt-4 text-sm text-gray-600 leading-relaxed">
-    Framework-heavy deep learning is intentionally not the focus of this portfolio.
-    The emphasis is on deployable systems, trust, and decision-making under real-world constraints.
-  </p>
-</SectionCard>
-
-
-
-          <SectionCard id="experience" title="Beyond Models: Product & Delivery Experience">
+          <SectionCard
+            id="experience"
+            title="Beyond Models: Product & Delivery Experience"
+          >
             <p>
-              Before focusing full-time on AI engineering, I worked in international tech environments 
-              where systems are built, shipped, and held accountable.
+              Before focusing full-time on applied AI, I worked in international
+              tech environments where systems are built, shipped, and held
+              accountable.
             </p>
             <p>
-              This experience shapes how I design AI today: 
-              not as isolated models, but as products that must survive real users, workflows, and constraints.
-              </p>
-            <p>
-              I bring a product and delivery mindset to AI, with experience in cross-functional collaboration, 
-              workflow-first design, and stakeholder-ready communication — using tools like Jira, Power BI, and Salesforce in real delivery contexts.
+              This experience shapes how I design AI today: not as isolated
+              models, but as products that must survive real users, workflows,
+              and constraints.
             </p>
-              <p>
-              This is why I care about governance, failure modes, and human-in-the-loop design as much as models and metrics.
-              </p>
+            <p>
+              I bring a product and delivery mindset to AI, with experience in
+              cross-functional collaboration, workflow-first design, and
+              stakeholder-ready communication — using tools like Jira, Power BI,
+              and Salesforce in real delivery contexts.
+            </p>
+            <p>
+              This is why I care about governance, failure modes, and
+              human-in-the-loop design as much as models and metrics.
+            </p>
           </SectionCard>
 
           <SectionCard id="projects" title="Selected Projects">
             <p className="text-white/70">
-              These projects are designed to demonstrate system thinking and real-world Med-Tech impact.
-              The emphasis is on architecture, workflow leverage, and deployable design—not “more code for the sake of code.”
+              These projects are designed to demonstrate system thinking and
+              real-world Med-Tech impact. The emphasis is on architecture,
+              workflow leverage, and deployable design—not “more code for the
+              sake of code.”
             </p>
 
             <div className="mt-5 space-y-5">
@@ -575,7 +577,8 @@ export default function Home() {
 
           <SectionCard id="contact" title="Contact">
             <p>
-              If you’re building Med-Tech products and care about real-world deployment—not demos—I’d love to connect.
+              If you’re building healthcare products and care about real-world
+              deployment—not demos—I’d love to connect.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-2">
@@ -616,7 +619,7 @@ export default function Home() {
           </SectionCard>
 
           <footer className="pt-10 text-sm text-white/40">
-            © {new Date().getFullYear()} Luca — AI Engineer, Med-Tech
+            © {new Date().getFullYear()} Luca — Applied AI · Healthcare Decision Systems
           </footer>
         </div>
       </div>

@@ -1,8 +1,8 @@
-# AI Med-Tech Portfolio Hub
+# Applied AI Med-Tech Portfolio Hub
 
-This repository hosts my personal **AI Engineer portfolio**, focused on real-world Med-Tech systems rather than toy demos.
+This repository hosts my personal portfolio focused on **Applied Artificial Intelligence for healthcare and regulated environments**, emphasizing real-world systems rather than experimental demos.
 
-The goal is simple: show how AI can be **designed, governed, and deployed** in environments where reliability, trust, and accountability are not optional.
+The goal is simple: show how AI can be **designed, governed, and deployed** where reliability, trust, and accountability are essential.
 
 > AI is not about having a chatbot on your home page.  
 > It’s about building systems that survive contact with reality.
@@ -11,30 +11,31 @@ The goal is simple: show how AI can be **designed, governed, and deployed** in e
 
 ## What this portfolio is about
 
-I design **AI-enabled decision systems** that live inside real clinical and operational workflows.
+I design **AI-enabled decision and workflow systems** embedded in real clinical and operational environments.
 
-That means dealing with:
-- messy, incomplete, and sometimes wrong data  
+This means working with:
+
+- messy, incomplete, and sometimes unreliable data  
 - regulatory, safety, and human constraints  
 - decisions that must be explainable, auditable, and defensible  
 
-This portfolio deliberately emphasizes **system thinking over model hype**.
+The portfolio deliberately emphasizes **system thinking and operational adoption over model hype**.
 
 ---
 
 ## Core focus areas
 
 - **Workflow Intelligence**  
-  Turning operational signals into decision-grade insights that people can actually act on.
+  Turning operational signals into decision-grade insights that people can act on.
 
 - **Clinical & Operational Decision Support**  
-  AI that assists professionals without removing responsibility or accountability.
+  AI that assists professionals while preserving responsibility and accountability.
 
 - **Data Quality & Trust Gates**  
   Validation layers that block downstream usage when data cannot be trusted.
 
 - **Deployable AI Systems**  
-  Architecture-first designs meant to survive production, not notebooks.
+  Architecture-first designs intended for production environments, not notebooks.
 
 ---
 
@@ -42,83 +43,86 @@ This portfolio deliberately emphasizes **system thinking over model hype**.
 
 AI in Med-Tech is not a UI feature.
 
-It is an architectural shift that affects:
-- how data is collected, validated, and trusted  
+It is an architectural shift that reshapes:
+
+- how data is validated and trusted  
 - how decisions are surfaced and explained  
 - how responsibility is enforced when systems fail  
 
-I intentionally design systems that **expose failure modes, conflicts, and trade-offs**, because that’s where real engineering happens.
+I intentionally design systems that **expose failure modes, conflicts, and trade-offs**, because that is where real engineering and governance emerge.
 
 ---
 
 ## Selected projects
 
-Each project in this portfolio is designed to demonstrate:
+Each project demonstrates:
+
 - clear system boundaries  
 - explicit assumptions  
 - human-in-the-loop governance  
-- production-style thinking  
+- production-oriented reasoning  
 
 You won’t find:
+
 - black-box “magic” predictions  
 - chatbot-driven decision-making  
-- dashboards built just to look impressive  
+- dashboards built only for visual appeal  
 
 You *will* find:
+
 - transparent rules  
 - explainable signals  
-- failure made visible  
+- visible failure handling  
 
-(See the live portfolio for detailed project breakdowns.)
+(See the live portfolio for full project breakdowns.)
 
 ---
 
-## Technical stack (high level)
+## Technical scope (high level)
 
-This portfolio intentionally avoids framework-driven signaling and instead reflects **how systems are built and reasoned about**.
+This portfolio reflects **how applied AI systems are designed and integrated**, not framework-driven experimentation.
 
 - **Languages**  
   Python, TypeScript, SQL  
 
 - **Applied AI & Decision Systems**  
-  Explainable ML concepts, rule-based + model-assisted decision support, human-in-the-loop patterns, AI failure modes and governance  
+  Explainable ML concepts, rule-based and model-assisted decision support, human-in-the-loop patterns, governance and failure analysis  
 
 - **ML Foundations (working knowledge)**  
-  scikit-learn, gradient boosting concepts, basic forecasting patterns, baselines and model evaluation  
+  Baselines, model evaluation, gradient boosting concepts, lightweight forecasting patterns  
 
 - **Data Quality & Pipelines**  
-  Data validation patterns, schema enforcement, trust gating, deterministic preprocessing, feature reasoning  
+  Validation patterns, schema enforcement, trust gating, deterministic preprocessing  
 
-- **APIs & Deployment**  
-  FastAPI-style APIs, Docker basics, CI/CD (GitHub Actions), cloud deployment patterns (AWS: Lambda, EC2, S3)  
+- **APIs & Deployment Awareness**  
+  API-based integration, container basics, CI/CD fundamentals, pragmatic cloud deployment patterns  
 
-- **Frontend for Decision UIs**  
-  Next.js, React, Tailwind, data-driven dashboards, guided UX for non-technical users  
+- **Frontend for Decision Interfaces**  
+  Next.js, React, Tailwind, guided UX for non-technical users  
 
-- **Systems & Architecture**  
-  System design thinking, observability concepts, policy gates, basic MLOps principles, architectural familiarity with Airflow and Kubernetes  
+- **Systems Thinking & Architecture**  
+  Observability concepts, policy gates, reliability-first design, foundational MLOps awareness  
 
-> Framework-heavy deep learning is intentionally not the focus of this portfolio.  
-> The emphasis is on deployable systems, trust, and decision-making under real-world constraints.
+> Deep learning frameworks and heavy infrastructure are intentionally not the focus.  
+> The emphasis is on **deployable, trustworthy, decision-oriented AI systems**.
 
 ---
 
 ## Live portfolio
 
-👉 **https://lucalazzaro-ai-medtech-portfolio.vercel.app**
+👉 https://lucalazzaro-ai-medtech-portfolio.vercel.app
 
 ---
 
 ## Contact
 
-If you’re building Med-Tech products and care about real-world deployment — not demos — feel free to reach out.
+If you are building healthcare or regulated-domain products and care about **real-world AI deployment**, feel free to reach out.
 
-- Email  
 - LinkedIn  
 - GitHub  
+- Email  
 - Calendly  
 
 ---
 
-© 2025 Luca — AI Engineer, Med-Tech
-
+© 2026 Luca Lazzaro — Applied AI · Healthcare Decision Systems
